@@ -1,77 +1,65 @@
-CommercePulse — Business Insights Report
+# CommercePulse — Business Insights Report
 
-1. Executive Summary
+## 1. Executive Summary
 
-CommercePulse is a SQL-based e-commerce analytics project that examines revenue performance, customer activity, and discount-related risks using Microsoft SQL Server.
+CommercePulse is an SQL-based e-commerce analytics project built with Microsoft SQL Server. It examines sales performance, customer activity, discount patterns, and potential revenue risks.
 
-The objective is to transform transactional data into business insights that support better decision-making.
+## 2. Revenue Performance
 
-2. Revenue Performance
-
-The revenue analysis returned the following results:
+The revenue analysis returned these results on the sample dataset:
 
 - Completed orders: 9
 - Units sold: 14
-- Total revenue after discounts: 10,007.00
+- Total revenue after discounts: 1,007.00
 
-Business insight: Tracking completed orders, units sold, and net revenue helps businesses understand sales performance.
+Net revenue is calculated as gross order value minus the discount amount.
 
-Recommended action: Monitor these metrics over time to identify changes in sales volume and revenue.
+**Business value:** These metrics help track sales performance and the impact of discounts.
 
-3. Customer Activity
+## 3. Customer Activity
 
-The customer analysis classifies customers into activity categories based on completed purchases and their last purchase dates.
+The customer analysis classifies customers based on completed purchases and purchase dates.
 
-The analysis identifies:
+It helps identify customers with no completed purchases, potentially inactive customers, and recently active customers.
 
-- Customers with no completed purchases
-- Customers who may have dropped off
-- Recently active customers
+**Recommended action:** Review inactive-customer patterns and validate activity thresholds before using them for real retention decisions.
 
-Business insight: Customer activity patterns can help identify customers who may need additional engagement.
+## 4. Discount and Revenue Risk Analysis
 
-Recommended action: Investigate inactive customers and consider appropriate retention campaigns. Validate the activity thresholds against real business requirements before using them operationally.
+The revenue-risk query calculates:
 
-4. Discount and Revenue Risk Analysis
+- Gross order value
+- Discount amount
+- Net revenue after discounts
+- Discount percentage
+- A discount review flag
 
-The revenue leak detection query calculates order-level gross value, discount amount, discount percentage, and a risk flag.
+Orders with discounts of 20% or more are flagged for review. Discounts of 10% or more but below 20% are flagged for monitoring.
 
-The query classifies discounts as:
+**Important:** These flags identify discount patterns for investigation. They do not prove that revenue was lost or establish profitability.
 
-- High discount: Review
-- Moderate discount: Monitor
-- Normal discount
-
-Business insight: Discounts should be monitored to understand their effect on revenue and profitability.
-
-Recommended action: Review higher-discount orders, verify promotional rules, and compare discount levels with profit margins before changing pricing policies.
-
-5. Technical Implementation
-
-The project uses:
+## 5. Technical Implementation
 
 - Microsoft SQL Server
 - SQL Server Management Studio (SSMS)
-- SQL joins and aggregations
+- Joins and aggregations
 - Common table expressions (CTEs)
 - Conditional logic using CASE
 - NULL handling and percentage calculations
-- Git and GitHub for project version control
+- Git and GitHub
 
-6. Limitations
+## 6. Limitations
 
-This project uses sample data rather than a live production dataset. Its findings demonstrate analytical methods and do not establish actual financial losses or prove customer churn.
+The project uses sample data, not live production transactions. Revenue, discount, and customer findings are demonstrations of analytical techniques, not verified business outcomes.
 
-The customer activity threshold is a demonstration rule, not a validated churn model.
+## 7. Future Improvements
 
-7. Future Improvements
-
-- Test queries against edge cases and larger datasets.
-- Add monthly revenue trends.
-- Analyze product and category performance.
+- Add automated data-quality checks.
+- Analyze monthly revenue trends.
 - Compare discounts with profit margins.
-- Automate data quality checks.
+- Add product and category performance analysis.
+- Test queries with larger datasets and edge cases.
 
-Conclusion
+## Conclusion
 
-CommercePulse demonstrates how SQL can turn e-commerce transaction data into structured revenue, customer, and discount-risk analysis. It provides a foundation for further data engineering and business analytics projects.
+CommercePulse demonstrates how SQL can transform e-commerce transactions into structured sales, customer, and discount analysis for business decision-making.
