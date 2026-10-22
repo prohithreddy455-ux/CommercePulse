@@ -18,6 +18,8 @@ Net revenue is calculated as gross order value minus the discount amount.
 
 ## 3. Customer Activity
 
+![Customer Analysis Results](customer_analysis_results.png)
+
 The customer analysis classifies customers based on completed purchases and purchase dates.
 
 It helps identify customers with no completed purchases, potentially inactive customers, and recently active customers.
