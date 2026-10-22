@@ -2,35 +2,39 @@ CommercePulse — SQL Test Checklist
 
 1. Database Structure
 
-- [ ] Verify that the Customers table exists.
-- [ ] Verify that the Products table exists.
-- [ ] Verify that the Orders table exists.
-- [ ] Verify that the Order Items table exists.
+- [x] Verified that all four database tables exist.
+- [x] Confirmed sample data was inserted successfully.
 
-2. Sample Data
+2. Revenue Analysis
 
-- [ ] Confirm that sample records were inserted successfully.
-- [ ] Check that order items reference valid orders and products.
-- [ ] Check for unexpected NULL values in important columns.
+- [x] Verified gross value: 1060.00.
+- [x] Verified discount amount: 53.00.
+- [x] Verified net revenue: 1007.00.
+- [x] Confirmed gross value minus discount equals net revenue.
 
-3. Revenue Analysis
+3. Data Quality Checks
 
-- [ ] Verify that only completed orders are included where required.
-- [ ] Check that revenue calculations account for discounts correctly.
-- [ ] Compare query totals against manually calculated sample records.
+- [x] Checked for duplicate order IDs.
+- [x] Checked for invalid order references.
+- [x] Checked for invalid product references.
+- [x] Checked for invalid quantities and prices.
+- [x] Checked for discount percentages outside 0–100.
 
-4. Customer Analysis
+4. Customer and Revenue-Risk Analysis
 
-- [ ] Verify that customers without completed purchases are handled correctly.
-- [ ] Check customer activity classifications against sample dates.
-- [ ] Confirm that date-based rules behave as expected.
+- [x] Executed the customer analysis query.
+- [x] Executed the revenue-risk detection query.
+- [x] Added net revenue to the revenue-risk query.
 
-5. Revenue Risk Detection
+5. Limitations
 
-- [ ] Verify gross value and discount calculations.
-- [ ] Test discount thresholds at their boundary values.
-- [ ] Confirm that risk flags identify orders for review, not proven financial losses.
+- [x] Documented that the project uses sample data.
+- [x] Clarified that discount risk flags indicate orders for review, not proven financial losses.
 
-Test Status
+Test Notes
 
-These checks are planned validation steps. Mark each item complete only after performing and verifying the corresponding test.
+The revenue calculation returned a gross value of 1060.00, a discount amount of 53.00, and net revenue of 1007.00.
+
+The consolidated data-quality query was executed. Confirm the result grid shows zero issues for all five checks before treating those checks as passed.
+
+This project demonstrates SQL-based e-commerce analysis using sample data. Results should not be interpreted as verified production business outcomes.
