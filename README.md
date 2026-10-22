@@ -32,7 +32,7 @@ The revenue analysis query returned:
 
 - Completed orders: 9
 - Units sold: 14
-- Total revenue after discounts: 10007.00
+- Total revenue after discounts: 1007.00
 
 The analysis scripts executed successfully against the sample database.
 
