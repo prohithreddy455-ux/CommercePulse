@@ -35,6 +35,6 @@ Test Notes
 
 The revenue calculation returned a gross value of 1060.00, a discount amount of 53.00, and net revenue of 1007.00.
 
-The consolidated data-quality query was executed. Confirm the result grid shows zero issues for all five checks before treating those checks as passed.
+The consolidated data-quality query was executed.
 
 This project demonstrates SQL-based e-commerce analysis using sample data. Results should not be interpreted as verified production business outcomes.
