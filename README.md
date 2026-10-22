@@ -45,3 +45,15 @@ This project uses sample data. Revenue-risk flags indicate patterns for investig
 ## Project Status
 Core database creation, sample-data insertion, and SQL analysis scripts have been executed successfully.
 
+## How to Run
+
+1. Install Microsoft SQL Server and SQL Server Management Studio (SSMS).
+2. Create or select the `CommercePulse` database.
+3. Run `01_create_tables.sql`.
+4. Run `02_insert_sample_data.sql`.
+5. Run `03_revenue_analysis.sql`.
+6. Run `04_customer_analysis.sql`.
+7. Run `05_revenue_leak_detection.sql`.
+
+Run the scripts in order. The analysis scripts depend on the tables and sample data created by the first two scripts.
+
