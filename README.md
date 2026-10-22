@@ -48,12 +48,14 @@ Core database creation, sample-data insertion, and SQL analysis scripts have bee
 ## How to Run
 
 1. Install Microsoft SQL Server and SQL Server Management Studio (SSMS).
-2. Create or select the `CommercePulse` database.
-3. Run `01_create_tables.sql`.
-4. Run `02_insert_sample_data.sql`.
-5. Run `03_revenue_analysis.sql`.
-6. Run `04_customer_analysis.sql`.
-7. Run `05_revenue_leak_detection.sql`.
+2. Create or select the "CommercePulse" database.
+3. Run "01_create_tables.sql".
+4. Run "02_insert_sample_data.sql".
+5. Run "06_add_data_quality_constraints.sql".
+6. Run "03_revenue_analysis.sql".
+7. Run "04_customer_analysis.sql".
+8. Run "05_revenue_leak_detection.sql".
 
-Run the scripts in order. The analysis scripts depend on the tables and sample data created by the first two scripts.
+Run the scripts in this order. The first two scripts create the tables and insert sample data. Script 06 adds data-quality constraints to protect against invalid quantities, negative prices, and discounts outside the 0–100% range. The analysis scripts then report sales, customer activity, and discount-risk patterns.
 
+Note: Run the constraints script only once on a database where those constraints have not already been created.
