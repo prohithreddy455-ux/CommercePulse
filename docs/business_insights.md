@@ -18,7 +18,7 @@ Net revenue is calculated as gross order value minus the discount amount.
 
 ## 3. Customer Activity
 
-![Customer Analysis Results](./customer_analysis_results.png)
+![Customer Analysis Results](https://raw.githubusercontent.com/prohithreddy455-ux/CommercePulse/main/docs/customer_analysis_results.png)
 
 The customer analysis classifies customers based on completed purchases and purchase dates.
 
